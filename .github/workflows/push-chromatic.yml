@@ -21,7 +21,7 @@ jobs:
     environment: chromatic
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - run: echo "Chromatic secret |$TEST_SECRET| token |$TEST_TOKEN|"
+      - run: echo "Chromatic (diff) secret |$TEST_SECRET| token |$TEST_TOKEN|"
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
           TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
