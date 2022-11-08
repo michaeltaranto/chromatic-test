@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   call-workflow-passing-data:
-    uses: ./.github/workflows/push-chromatic.yml@main
+    uses: michaeltaranto/chromatic-test/.github/workflows/push-chromatic.yml@main
 
   test:
     steps:
