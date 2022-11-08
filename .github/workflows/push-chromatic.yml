@@ -4,6 +4,7 @@ on: workflow_call
 
 jobs:
   push_chromatic:
+    runs-on: ubuntu-latest
     steps:
       - name: Run
         run: echo 'Chromatic "$TEST_SECRET"'
