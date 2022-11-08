@@ -7,4 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run
-        run: echo "Chromatic $TEST_SECRET"
+        run: echo "Chromatic |$TEST_SECRET|"
+        env:
+          TEST_SECRET: ${{ secrets.TEST_SECRET }}
