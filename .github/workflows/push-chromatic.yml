@@ -1,0 +1,9 @@
+name: Push to Chromatic
+
+on: workflow_call
+
+jobs:
+  push_chromatic:
+    steps:
+      - name: Run
+        run: echo 'Chromatic "$TEST_SECRET"'

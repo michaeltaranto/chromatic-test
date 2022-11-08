@@ -1,0 +1,13 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  call-workflow-passing-data:
+    uses: .github/workflows/push-chromatic.yml@main
+
+  test:
+    steps:
+      - name: Run
+        run: echo 'Test Run "$TEST_SECRET"'
+ 

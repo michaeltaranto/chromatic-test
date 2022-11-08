@@ -1,0 +1,22 @@
+{
+  "name": "chromatic-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"✅ Tested fine!\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaeltaranto/chromatic-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaeltaranto/chromatic-test/issues"
+  },
+  "homepage": "https://github.com/michaeltaranto/chromatic-test#readme",
+  "volta": {
+    "node": "16.18.0"
+  }
+}
