@@ -3,9 +3,6 @@ name: Test
 on: [push, pull_request]
 
 jobs:
-  call-workflow-passing-data:
-    uses: michaeltaranto/chromatic-test/.github/workflows/push-chromatic.yml@main
-
   test:
     runs-on: ubuntu-latest
     steps:
