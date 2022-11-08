@@ -5,8 +5,10 @@ on: workflow_call
 jobs:
   push_chromatic:
     runs-on: ubuntu-latest
+    environment: chromatic
     steps:
       - name: Run
-        run: echo "Chromatic |$TEST_SECRET|"
+        run: echo "Chromatic secret |$TEST_SECRET| token |$TEST_TOKEN|"
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
+          TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
