@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"✅ Tested fine!\""
+    "test": "console.log('SECRETS-*')"
   },
   "repository": {
     "type": "git",
