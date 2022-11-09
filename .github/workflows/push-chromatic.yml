@@ -34,7 +34,5 @@ jobs:
           value=`cat test.txt`
           echo The result is $value
 
-      - run: echo "Chromatic secret |$TEST_SECRET| token |$TEST_TOKEN|"
-        env:
-          TEST_SECRET: ${{ secrets.TEST_SECRET }}
-          TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
+      - run: echo "Branch test ${{ github.event.workflow_run.head_branch }}"
+      
