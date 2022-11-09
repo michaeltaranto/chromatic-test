@@ -34,5 +34,5 @@ jobs:
           value=`cat test.txt`
           echo The result is $value
 
-      - run: echo "Branch test ${{ github.event.workflow_run.head_branch }}"
-      
+      - run: echo "Branch test ${{ github.event.workflow_run.head_repository.owner.login }}:${{ github.event.workflow_run.head_branch }}"
+
