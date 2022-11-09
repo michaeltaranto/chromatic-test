@@ -35,4 +35,3 @@ jobs:
           echo The result is $value
 
       - run: echo "Branch test ${{ github.event.workflow_run.head_branch }}"
-      
