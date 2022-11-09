@@ -7,7 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run
-        run: echo "Test Run |$TEST_SECRET|"
-        env:
-          TEST_SECRET: ${{ secrets.TEST_SECRET }}
+        run: echo "BUILT CONTENT" > test.txt
  
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: test.txt
+          if-no-files-found: error

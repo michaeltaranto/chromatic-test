@@ -21,7 +21,17 @@ jobs:
     environment: chromatic
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - run: echo "Chromatic (diff) secret |$TEST_SECRET| token |$TEST_TOKEN|"
-        env:
-          TEST_SECRET: ${{ secrets.TEST_SECRET }}
-          TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
+      - name: Download artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: build-output
+          workflow: ${{ github.event.workflow_run.workflow_id }}
+          workflow_conclusion: success
+
+      - name: Print built output
+        shell: bash
+        run: |
+          value=`cat test.txt`
+          echo The result is $value
+
+      - run: echo "Branch test ${{ github.event.workflow_run.head_branch }}"
