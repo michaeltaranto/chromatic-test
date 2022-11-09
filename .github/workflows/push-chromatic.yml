@@ -22,9 +22,11 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v3
+        uses: dawidd6/action-download-artifact@v2
         with:
           name: build-output
+          workflow: ${{ github.event.workflow_run.workflow_id }}
+          workflow_conclusion: success
 
       - name: Print built output
         shell: bash
